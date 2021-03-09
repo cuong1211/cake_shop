@@ -25,6 +25,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         });
 
     </script>
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="js/megamenu.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".megamenu").megamenu();
+        });
+
+    </script>
     <!--start slider -->
     <link rel="stylesheet" href="css/fwslider.css" media="all">
     <script src="js/jquery-ui.min.js"></script>
@@ -84,6 +92,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         });
 
     </script>
+    <!-- dropdown -->
+    <script src="js/jquery.easydropdown.js"></script>
 </head>
 
 <body>
@@ -113,7 +123,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <li><a href="checkout.html">Wishlist</a></li> |
                     <li><a href="{{ url('/checkout') }}">Checkout</a></li> |
                     <li><a href="{{ url('/login') }}">Log In</a></li> |
-                    <li><a href="{{ url('/register')}}">Sign Up</a></li>
+                    <li><a href="{{ url('/register') }}">Sign Up</a></li>
                 </ul>
             </div>
             <div class="clear"></div>
