@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Validator;
 class ProductController extends Controller
 {
     private $rules = [
-        'name' => 'required|max:200|utegonique:caries',
+        'name' => 'required|max:200|unique:products',
         'description' => 'required|max:500',
-        'image' => 'required|max:200',
+        
     ];
     private $errors = [
         'name.required' => 'Please enter name.',
@@ -22,8 +22,7 @@ class ProductController extends Controller
         'description.required' => 'Please enter description.',
         'description.max'      => 'description too long.',
 
-        'image.required' => 'Please enter image.',
-        'image.max'      => 'image too long.',
+        
     ];
 
     public function getProducts()
@@ -33,22 +32,57 @@ class ProductController extends Controller
         return view('pages.backend.product.main', compact('products'));
     }
 
-//     public function createCategories()
-//     {
-//         return view('pages.category.create');
-//     }
+    public function createProducts()
+    {
+        return view('pages.backend.product.create');
+    }
 
-//     public function postCreateCategories(Request $request)
-//     {
-//         $validator = Validator::make($request->all(), $this->rules, $this->errors)->validate();
-//         $categories = Category::create([
-//             "name" => $request->name,
-//             "description" => $request->description,
-//             "image" => $request->image,
-//         ]);
-//         if ($categories) {
-//             return redirect('category')->with('success', 'Add category successful!');
-//         }
-//         return redirect('category')->with('error', 'Have trouble! try again later.');
-//     }
+    public function postcreateProducts(Request $request)
+    {
+        $validator = Validator::make($request->all(), $this->rules, $this->errors)->validate();
+        $products = Product::create([
+            "name" => $request->name,
+            "description" => $request->description,
+            "price"=> $request->price,
+            
+        ]);
+        if ($products) {
+            return redirect('admin')->with('success', 'Add product successful!');
+        }
+        return redirect('admin')->with('error', 'Have trouble! try again later.');
+    }
+    public function editProducts($id)
+    {
+        $products = Product::find($id);
+        // $cateproduct = Product::find($id)->categories()->pluck('categories.id')->toArray();
+        // $categories = Category::query()->latest()->get();
+        return view('pages.backend.product.edit', compact('products'));
+    }
+
+    public function posteditProducts(Request $request, $id)
+    {
+        $this->rules['name'] = [
+            'required',
+            'max:255',
+            'unique:products,name,'.$id
+        ];
+        $validator = Validator::make($request->all(), $this->rules, $this->errors)->validate();
+        $products = Product::find($id)->update([
+                "name" => $request->name,
+                "description" => $request->description,
+                "price"=>$request->price
+        ]);
+        if ($products) {
+            return redirect('admin')->with('success','Edit product successful');
+        }
+        return redirect('admin')->with('error','Have trouble, Try again later.');
+    }
+    public function deleteProducts($id)
+    {
+        $products = Product::find($id)->delete();
+        if ($products) {
+            return redirect('admin')->with('success','Delete product successful');
+        }
+        return redirect('admin')->with('error','Have trouble, Try again later.');
+    }
 }

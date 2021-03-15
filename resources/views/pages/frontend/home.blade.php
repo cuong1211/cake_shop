@@ -48,18 +48,20 @@
                         <div class="row">
                             @foreach ($products as $item)
                                 <div class="col-xl-4">
-                                    <a href="{{ url('/product') }}">
+                                    <a href="{{ url('/product').'/'.$item->id }}">
                                         <div class="inner_content clearfix">
                                             <div class="product_image">
                                                 <img src="images/pic.jpg" alt="" />
                                             </div>
-                                            <div class="sale-box"><span class="on_sale title_shop">{{ $item->name }}</span>
+                                            <div class="sale-box"><span class="on_sale title_shop"></span>
                                             </div>
                                             <div class="price">
                                                 <div class="cart-left">
+                                                    <p class="title">{{ $item->name }}</p>
                                                     <p class="title">{{ $item->description }}</p>
                                                     <div class="price1">
-                                                        <span class="actual">$12.00</span>
+
+                                                        <span class="actual">{{ $item->price}} VND</span>
                                                     </div>
                                                 </div>
                                                 <div class="cart-right"> </div>
@@ -69,7 +71,7 @@
                                     </a>
                                 </div>
                             @endforeach
-
+                            {{ $products->links() }}
                         </div>
 
                             <div class="clear"></div>

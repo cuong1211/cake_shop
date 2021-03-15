@@ -30,21 +30,20 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="desc1 span_3_of_2">
-                        <h3 class="m_3">Lorem ipsum dolor sit amet</h3>
-                        <p class="m_5">Rs. 888 <span class="reducedfrom">Rs. 999</span> <a href="#">click for offer</a>
+
+
+                        <h3 class="m_3">{{ $products->name }}</h3>
+                        <p class="m_5">{{ $products->price }} <span class="reducedfrom">Rs. 999</span> <a href="#">click
+                                for offer</a>
                         </p>
                         <div class="btn_form">
                             <form>
-                                <input type="submit" value="buy" title="">
+                                <input type="submit" value="Buy" title="">
                             </form>
                         </div>
                         <span class="m_link"><a href="#">login to save in wishlist</a> </span>
-                        <p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                            veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-                            commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-                            molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-                            iusto odio dignissim qui blandit </p>
+                        <p class="m_text2">{{ $products->description }} </p>
+
                     </div>
                     <div class="clear"></div>
                     <div class="clients">

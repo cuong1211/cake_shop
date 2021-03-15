@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 //frontend
 Route::get('/', 'frontend\ProductController@getProducts');
-Route::get('/product', function () {
-    return view('pages.frontend.single');
-});
+Route::get('/product/{id}', 'frontend\ProductController@getSingle');
 Route::get('/login', function () {
     return view('pages.frontend.login');
 });
@@ -30,4 +28,10 @@ Route::get('/checkout', function () {
 
 //backend
 Route::get('/admin', 'backend\ProductController@getProducts');
+Route::get('/createProduct', 'backend\ProductController@createProducts');
+Route::post('/createProduct', 'backend\ProductController@postcreateProducts');
+Route::get('/editProduct/{id}', 'backend\ProductController@editProducts');
+Route::post('/editProduct/{id}', 'backend\ProductController@posteditProducts');
+Route::delete('/deleteProduct/{id}', 'backend\ProductController@deleteProducts');
+
 

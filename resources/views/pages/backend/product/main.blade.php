@@ -5,6 +5,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    @if (session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
                     <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                             <div class="iq-header-title">
@@ -14,9 +24,10 @@
                         <div class="iq-card-body">
                             <div id="table" class="table-editable">
                                 <span class="table-add float-right mb-3 mr-2">
-                                    <button class="btn btn-sm iq-bg-success"><i class="ri-add-fill"><span class="pl-1">Add
+                                    <a href="{{ url('createProduct') }}" class="btn btn-sm iq-bg-success"><i
+                                            class="ri-add-fill"><span class="pl-1">Add
                                                 New</span></i>
-                                    </button>
+                                    </a>
                                 </span>
                                 <table class="table table-bordered table-responsive-md table-striped text-center">
                                     <thead>
@@ -24,7 +35,9 @@
                                             <th>ID</th>
                                             <th>Name</th>
                                             <th>Description</th>
-                                            
+                                            <th>Price</th>
+                                            <th>Action</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -36,7 +49,17 @@
                                                 <td>{{ $count }}</td>
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->description }}</td>
-
+                                                <td>{{ $item->price}}</td>
+                                                <td class="action-button">
+                                                    <span class="table-edit"><a class="btn iq-bg-info btn-rounded btn-sm my-0"
+                                                            href="{{ url('editProduct') . '/' . $item->id }}">Edit</a></span>
+                                                    <form action="{{ url('deleteProduct').'/'.$item->id }}" method="post">
+                                                        @csrf
+                                                        {{ method_field('DELETE') }}
+                                                       <button type="submit"
+                                                                class="btn iq-bg-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                                    </form>
+                                                </td>
                                             </tr>
                                             @php
                                                 $count++;
