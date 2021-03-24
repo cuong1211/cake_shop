@@ -33,5 +33,5 @@ Route::post('/createProduct', 'backend\ProductController@postcreateProducts');
 Route::get('/editProduct/{id}', 'backend\ProductController@editProducts');
 Route::post('/editProduct/{id}', 'backend\ProductController@posteditProducts');
 Route::delete('/deleteProduct/{id}', 'backend\ProductController@deleteProducts');
-
+Route::get('/search','backend\ProductController@search');
 

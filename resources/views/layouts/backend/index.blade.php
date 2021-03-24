@@ -96,10 +96,10 @@
                         <ul class="navbar-nav ml-auto navbar-list">
                             <li class="nav-item nav-icon">
                                 <div class="iq-search-bar">
-                                    <form action="#" class="searchbox">
-                                        <input type="text" class="text search-input"
-                                            placeholder="Type here to search...">
-                                        <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+                                    <form class="search" type="get" action="{{ url('/search') }}">
+                                        <input type="search" name="query" class="textbox"placeholder="Tìm kiếm">
+                                        <button class="btn btn-outline-light" type="submit">Search           </button>
+                                        <div id="response"> </div>
                                     </form>
                                 </div>
                             </li>

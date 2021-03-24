@@ -223,12 +223,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
             <div class="header-bottom-right">
-                <div class="search">
-                    <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';"
-                        onblur="if (this.value == '') {this.value = 'Search';}">
-                    <input type="submit" value="Subscribe" id="submit" name="submit">
+                <form class="search" type="get" action="{{ url('/search') }}">
+                    <input type="search" name="query" class="textbox"placeholder="Tìm kiếm">
+                    <button class="btn btn-outline-light" type="submit">Search           </button>
                     <div id="response"> </div>
-                </div>
+                </form>
                 <div class="tag-list">
                     <ul class="icon1 sub-icon1 profile_img">
                         <li><a class="active-icon c1" href="#"> </a>
@@ -305,7 +304,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
-      <div class="like_box">	
+      <div class="like_box">
        <div class="fb-like-box" data-href="http://www.facebook.com/w3layouts" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
       </div>
      </div>
@@ -352,7 +351,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
      <p>Phone:(00) 222 666 444</p>
      <p>Fax: (000) 000 00 00 0</p>
      <p>Email: <span>mail[at]leoshop.com</span></p>
-     
+
      </div>
      <div class="social-media">
       <ul>
