@@ -27,7 +27,7 @@
                 <img src="images/banner1.jpg" alt="" />
                 <div class="slide_content">
                     <div class="slide_content_wrap">
-                        <h4 class="title">consectetuer adipiscing </h4>
+                        <h4 class="title">banh ngot </h4>
                         <p class="description">diam nonummy nibh euismod</p>
                     </div>
                 </div>
@@ -93,14 +93,7 @@
                     </div>
                     <div class="top-border"> </div>
                     <div class="sidebar-bottom">
-                        <h2 class="m_1">Newsletters<br> Signup</h2>
-                        <p class="m_text">Lorem ipsum dolor sit amet, consectetuer</p>
-                        <div class="subscribe">
-                            <form>
-                                <input name="userName" type="text" class="textbox">
-                                <input type="submit" value="Subscribe">
-                            </form>
-                        </div>
+                      
                     </div>
                 </div>
                 <div class="clear"></div>
