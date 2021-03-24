@@ -12,19 +12,26 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('pages.home');
-});
-Route::get('/product', function () {
-    return view('pages.single');
-});
+//frontend
+Route::get('/', 'frontend\ProductController@getProducts');
+Route::get('/product/{id}', 'frontend\ProductController@getSingle');
 Route::get('/login', function () {
-    return view('pages.login');
+    return view('pages.frontend.login');
 });
 Route::get('/register', function () {
-    return view('pages.register');
+    return view('pages.frontend.register');
 });
 Route::get('/checkout', function () {
-    return view('pages.checkout');
+    return view('pages.frontend.checkout');
 });
+
+
+//backend
+Route::get('/admin', 'backend\ProductController@getProducts');
+Route::get('/createProduct', 'backend\ProductController@createProducts');
+Route::post('/createProduct', 'backend\ProductController@postcreateProducts');
+Route::get('/editProduct/{id}', 'backend\ProductController@editProducts');
+Route::post('/editProduct/{id}', 'backend\ProductController@posteditProducts');
+Route::delete('/deleteProduct/{id}', 'backend\ProductController@deleteProducts');
+
+
