@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+    @yield('js')
 </head>
 
 <body>
@@ -57,6 +58,14 @@
                                     class="ri-arrow-right-s-line iq-arrow-right"></i></a>
 
                         </li>
+                        <li>
+                            <a href="{{ url('/img') }}" class="iq-waves-effect" aria-expanded="false"><span
+                                    class="ripple rippleEffect"></span><i
+                                    class="las la-user-tie iq-arrow-left"></i><span>file manager</span><i
+                                    class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+
+                        </li>
+
 
 
                     </ul>
