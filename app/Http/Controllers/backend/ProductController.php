@@ -12,7 +12,7 @@ class ProductController extends Controller
     private $rules = [
         'name' => 'required|max:200|unique:products',
         'description' => 'required|max:500',
-        
+
     ];
     private $errors = [
         'name.required' => 'Please enter name.',
@@ -22,13 +22,13 @@ class ProductController extends Controller
         'description.required' => 'Please enter description.',
         'description.max'      => 'description too long.',
 
-        
+
     ];
 
     public function getProducts()
     {
         $products = Product::query()->latest()->get();
-        
+
         return view('pages.backend.product.main', compact('products'));
     }
 
@@ -44,7 +44,7 @@ class ProductController extends Controller
             "name" => $request->name,
             "description" => $request->description,
             "price"=> $request->price,
-            
+
         ]);
         if ($products) {
             return redirect('admin')->with('success', 'Add product successful!');
@@ -85,4 +85,11 @@ class ProductController extends Controller
         }
         return redirect('admin')->with('error','Have trouble, Try again later.');
     }
+    public function search() 
+    {
+       $search_text = $_GET['query'];
+        $products = Product::where('name','LIKE','%'.$search_text.'%')->get();
+        return view('pages.backend.product.search',compact('products'));
+    }
+    
 }

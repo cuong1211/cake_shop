@@ -174,14 +174,14 @@
                             </div>
                             <div class="social-media">
                                 <ul>
-                                    <li> <span class="simptip-position-bottom simptip-movable"
-                                            data-tooltip="Google"><a href="#" target="_blank"> </a></span></li>
+                                    <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a
+                                                href="#" target="_blank"> </a></span></li>
                                     <li><span class="simptip-position-bottom simptip-movable"
                                             data-tooltip="Linked in"><a href="#" target="_blank"> </a> </span></li>
                                     <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Rss"><a
                                                 href="#" target="_blank"> </a></span></li>
-                                    <li><span class="simptip-position-bottom simptip-movable"
-                                            data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
+                                    <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a
+                                                href="#" target="_blank"> </a></span></li>
                                 </ul>
                             </div>
                         </div>

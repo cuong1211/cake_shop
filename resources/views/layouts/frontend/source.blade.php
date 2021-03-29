@@ -1,4 +1,4 @@
-<title>Free Leoshop Website Template | Home :: w3layouts</title>
+<title>bánh kẹo sinh nhật</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <base href="{{ asset('frontend') }}/">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -86,4 +86,4 @@
 </script>
 <!-- dropdown -->
 <script src="js/jquery.easydropdown.js"></script>
-@include('layouts.frontend.style')
+@include("layouts.frontend.style")

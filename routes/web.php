@@ -33,5 +33,15 @@ Route::post('/createProduct', 'backend\ProductController@postcreateProducts');
 Route::get('/editProduct/{id}', 'backend\ProductController@editProducts');
 Route::post('/editProduct/{id}', 'backend\ProductController@posteditProducts');
 Route::delete('/deleteProduct/{id}', 'backend\ProductController@deleteProducts');
+Route::get('/search','backend\ProductController@search');
+Route::get('/img', function () {
+    return view('pages.backend.file');
+});
+
+
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 
 

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+    @yield('js')
 </head>
 
 <body>
@@ -57,6 +58,14 @@
                                     class="ri-arrow-right-s-line iq-arrow-right"></i></a>
 
                         </li>
+                        <li>
+                            <a href="{{ url('/img') }}" class="iq-waves-effect" aria-expanded="false"><span
+                                    class="ripple rippleEffect"></span><i
+                                    class="las la-user-tie iq-arrow-left"></i><span>file manager</span><i
+                                    class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+
+                        </li>
+
 
 
                     </ul>
@@ -96,10 +105,10 @@
                         <ul class="navbar-nav ml-auto navbar-list">
                             <li class="nav-item nav-icon">
                                 <div class="iq-search-bar">
-                                    <form action="#" class="searchbox">
-                                        <input type="text" class="text search-input"
-                                            placeholder="Type here to search...">
-                                        <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+                                    <form class="search" type="get" action="{{ url('/search') }}">
+                                        <input type="search" name="query" class="textbox"placeholder="Tìm kiếm">
+                                        <button class="btn btn-outline-light" type="submit">Search           </button>
+                                        <div id="response"> </div>
                                     </form>
                                 </div>
                             </li>

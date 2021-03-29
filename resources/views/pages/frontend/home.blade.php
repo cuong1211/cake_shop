@@ -43,25 +43,24 @@
             <div class="section group">
                 <div class="cont span_2_of_3">
                     <h2 class="head">Featured Products</h2>
-                    
+
                     <div class="top-box">
                         <div class="row">
                             @foreach ($products as $item)
                                 <div class="col-xl-4">
-                                    <a href="{{ url('/product').'/'.$item->id }}">
+                                    <a href="{{ url('/product') . '/' . $item->id }}">
                                         <div class="inner_content clearfix">
                                             <div class="product_image">
                                                 <img src="images/pic.jpg" alt="" />
                                             </div>
-                                            <div class="sale-box"><span class="on_sale title_shop"></span>
-                                            </div>
+                                            
                                             <div class="price">
                                                 <div class="cart-left">
                                                     <p class="title">{{ $item->name }}</p>
                                                     <p class="title">{{ $item->description }}</p>
                                                     <div class="price1">
 
-                                                        <span class="actual">{{ $item->price}} VND</span>
+                                                        <span class="actual">{{ $item->price }} VND</span>
                                                     </div>
                                                 </div>
                                                 <div class="cart-right"> </div>
@@ -74,7 +73,7 @@
                             {{ $products->links() }}
                         </div>
 
-                            <div class="clear"></div>
+                        <div class="clear"></div>
                     </div>
 
                 </div>
@@ -97,18 +96,11 @@
                                 <img src="images/t-img3.jpg" alt="" />
                             </div>
                         </div>
-                        <div class="btn"><a href="single.html">Check it Out</a></div>
+
                     </div>
                     <div class="top-border"> </div>
                     <div class="sidebar-bottom">
-                        <h2 class="m_1">Newsletters<br> Signup</h2>
-                        <p class="m_text">Lorem ipsum dolor sit amet, consectetuer</p>
-                        <div class="subscribe">
-                            <form>
-                                <input name="userName" type="text" class="textbox">
-                                <input type="submit" value="Subscribe">
-                            </form>
-                        </div>
+
                     </div>
                 </div>
                 <div class="clear"></div>
