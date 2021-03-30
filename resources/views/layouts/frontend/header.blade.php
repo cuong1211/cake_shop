@@ -6,7 +6,7 @@
         </div>
         <div class="cssmenu">
             <ul>
-                <li class="active"><a href="login.html">Account</a></li> | 
+                <li class="active"><a href="login.html">Account</a></li> |
                 <li><a href="{{ url('/login') }}">Log In</a></li> |
                 <li><a href="{{ url('/register') }}">Sign Up</a></li>
             </ul>
@@ -18,12 +18,12 @@
     <div class="wrap">
         <div class="header-bottom-left">
             <div class="logo">
-                <a href="{{ url('/') }}"><img src="images/logo.png" alt="" /></a>
+                <a class="logo-title" href="{{ url('/') }}"> <h1 >NHC BAKERY</h1> </a>
             </div>
             <div class="menu">
                 <ul class="megamenu skyblue">
-                    <li class="active grid"><a href="index.html">Home</a></li>
-                    <li><a class="color4" href="#">CAKE</a>
+                    <li class="active grid"><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a class="color4" href="#">BÁNH</a>
                         <div class="megapanel">
                             <div class="row">
                                 <div class="col1">
@@ -63,8 +63,8 @@
                             </div>
                         </div>
                     </li>
-                    
-                    <li><a class="color7" href="other.html">Purchase</a></li>
+
+                    <li><a class="color7" href="other.html">MUA</a></li>
                 </ul>
             </div>
         </div>
@@ -76,7 +76,7 @@
                 <div id="response"> </div>
             </div>
             <div class="tag-list">
-                
+
                 <ul class="icon1 sub-icon1 profile_img">
                     <li><a class="active-icon c2" href="#"> </a>
                         <ul class="sub-icon1 list">
