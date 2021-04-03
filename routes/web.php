@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 //frontend
 Route::get('/', 'frontend\ProductController@getProducts');
 Route::get('/product/{id}', 'frontend\ProductController@getSingle');
+Route::get('/addproduct/{id}', 'frontend\ProductController@addProducts');
 Route::get('/login', function () {
     return view('pages.frontend.login');
 });
@@ -35,14 +36,8 @@ Route::get('/editProduct/{id}', 'backend\ProductController@editProducts');
 Route::post('/editProduct/{id}', 'backend\ProductController@posteditProducts');
 Route::delete('/deleteProduct/{id}', 'backend\ProductController@deleteProducts');
 Route::get('/search','backend\ProductController@search');
-Route::get('/img', function () {
-    return view('pages.backend.file');
-});
 
 
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});
 
 

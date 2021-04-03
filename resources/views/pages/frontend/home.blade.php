@@ -27,7 +27,7 @@
                 <img src="images/hihi1.jpg" alt="" />
                 <div class="slide_content">
                     <div class="slide_content_wrap">
-s
+                        s
                     </div>
                 </div>
             </div>
@@ -50,19 +50,29 @@ s
                                     <a href="{{ url('/product') . '/' . $item->id }}">
                                         <div class="inner_content clearfix">
                                             <div class="product_image">
-                                                <img src="images/deptrai.jpg" alt="" />
+                                                <img src="images/deptrai.jpg" alt="" style="width:70%">
                                             </div>
 
                                             <div class="price">
-                                                <div class="cart-left">
-                                                    <p class="title">{{ $item->name }}</p>
-                                                    <p class="title">{{ $item->description }}</p>
-                                                    <div class="price1">
-
-                                                        <span class="actual">{{ $item->price }} VND</span>
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <div class="cart-left">
+                                                            <p class="title">{{ $item->name }}</p>
+                                                            <p class="title">{{ $item->description }}</p>
+                                                            <div class="price1">
+                                                                <span class="actual">{{ $item->price }} VND</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="">
+                                                            <span href=""><i class="fal fa-shopping-cart"></i></span>
+                                                            <span href=""><i class="fal fa-shopping-basket"></i></span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="cart-right"> </div>
+
+
                                                 <div class="clear"></div>
                                             </div>
                                         </div>
