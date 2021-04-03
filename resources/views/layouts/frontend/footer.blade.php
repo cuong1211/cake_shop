@@ -4,7 +4,7 @@
             <div class="section group example">
                 <div class="col_1_of_2 span_1_of_2">
                     <ul class="f-list">
-                        <li><img src="images/2.png"><span class="f-text">Free ship đơn hàng khi đơn hàng trên 300k và dưới 5km</span>
+                        <li><img src="images/2.png"><span class="f-text">Free ship khi đơn hàng trên 300k và dưới 5km</span>
                             <div class="clear"></div>
                         </li>
                     </ul>

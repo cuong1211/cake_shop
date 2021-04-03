@@ -85,11 +85,11 @@ class ProductController extends Controller
         }
         return redirect('admin')->with('error','Have trouble, Try again later.');
     }
-    public function search() 
+    public function search()
     {
        $search_text = $_GET['query'];
         $products = Product::where('name','LIKE','%'.$search_text.'%')->get();
         return view('pages.backend.product.search',compact('products'));
     }
-    
+
 }

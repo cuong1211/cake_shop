@@ -27,6 +27,7 @@ Route::get('/checkout', function () {
 
 
 //backend
+Route::get('/search', 'backend\ProductController@search');
 Route::get('/admin', 'backend\ProductController@getProducts');
 Route::get('/createProduct', 'backend\ProductController@createProducts');
 Route::post('/createProduct', 'backend\ProductController@postcreateProducts');

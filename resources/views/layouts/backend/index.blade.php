@@ -32,10 +32,10 @@
         <!-- Sidebar  -->
         <div class="iq-sidebar">
             <div class="iq-sidebar-logo d-flex justify-content-between">
-                <a href="index.html" class="header-logo">
+                <a href="{{url('/admin')}}" class="header-logo">
                     <img src="images/logo.png" class="img-fluid rounded-normal" alt="">
                     <div class="logo-title">
-                        <span class="text-danger text-uppercase">Server<span class="text-primary ml-1">360</span></span>
+                        <span class="text-danger text-uppercase">NHC<span class="text-primary ml-1">Bakery</span></span>
                     </div>
                 </a>
                 <div class="iq-menu-bt-sidebar">
@@ -190,13 +190,13 @@
                                             <h5 class="mb-0 text-white line-height">Hello Barry Tech</h5>
                                             <span class="text-white font-size-12">Available</span>
                                         </div>
-                                        <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">
+                                        <a href="{{url('/')}}" class="iq-sub-card iq-bg-primary-hover">
                                             <div class="media align-items-center">
                                                 <div class="rounded iq-card-icon iq-bg-primary">
                                                     <i class="ri-file-user-line"></i>
                                                 </div>
                                                 <div class="media-body ml-3">
-                                                    <h6 class="mb-0 ">My Profile</h6>
+                                                    <h6 class="mb-0 ">trang chu</h6>
                                                     <p class="mb-0 font-size-12">View personal profile details.</p>
                                                 </div>
                                             </div>
@@ -259,12 +259,12 @@
             <div class="row">
                 <div class="col-lg-6">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
+                        <li class="list-inline-item">Privacy Policy</li>
+                        <li class="list-inline-item">Terms of Use</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 text-right">
-                    Copyright 2020 <a href="#">Server360</a> All Rights Reserved.
+                    Copyright 2021 By NHC Bakery.
                 </div>
             </div>
         </div>

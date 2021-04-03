@@ -1,7 +1,7 @@
 <div class="header-top">
     <div class="wrap">
         <div class="header-top-left">
-
+            <h1>Ninh Huy Cường Bakery</h1>
             <div class="clear"></div>
         </div>
         <div class="cssmenu">
@@ -26,40 +26,28 @@
                     <li><a class="color4" href="#">BÁNH</a>
                         <div class="megapanel">
                             <div class="row">
-                                <div class="col1">
+                                <div class="col0">
                                     <div class="h_nav">
-                                        <h4>Contact Lenses</h4>
+                                        <h4>Bánh Sinh Nhật</h4>
                                         <ul>
-                                            <li><a href="womens.html">Daily-wear soft lenses</a></li>
-                                            <li><a href="womens.html">Extended-wear</a></li>
-                                            <li><a href="womens.html">Lorem ipsum </a></li>
-                                            <li><a href="womens.html">Planned replacement</a></li>
+                                            <li><a href="womens.html">Bánh In Ảnh</a></li>
+                                            <li><a href="womens.html">Bánh Mẫu</a></li>
+                                            <li><a href="womens.html">Bánh Theo Yêu Cầu</a></li>
+                                            <li><a href="womens.html">Bánh Động Vật</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col1">
+                                <div class="col0">
                                     <div class="h_nav">
-                                        <h4>Sun Glasses</h4>
+                                        <h4>Bánh Cưới</h4>
                                         <ul>
-                                            <li><a href="womens.html">Heart-Shaped</a></li>
-                                            <li><a href="womens.html">Square-Shaped</a></li>
-                                            <li><a href="womens.html">Round-Shaped</a></li>
-                                            <li><a href="womens.html">Oval-Shaped</a></li>
+                                            <li><a href="womens.html">Bánh 3 Tầng</a></li>
+                                            <li><a href="womens.html">Combo Cưới</a></li>
+                                            <li><a href="womens.html">Bánh Theo Yêu Cầu</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col1">
-                                    <div class="h_nav">
-                                        <h4>Eye Glasses</h4>
-                                        <ul>
-                                            <li><a href="womens.html">Anti Reflective</a></li>
-                                            <li><a href="womens.html">Aspheric</a></li>
-                                            <li><a href="womens.html">Bifocal</a></li>
-                                            <li><a href="womens.html">Hi-index</a></li>
-                                            <li><a href="womens.html">Progressive</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </li>
@@ -69,12 +57,11 @@
             </div>
         </div>
         <div class="header-bottom-right">
-            <div class="search">
-                <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';"
-                    onblur="if (this.value == '') {this.value = 'Search';}">
-                <input type="submit" value="Subscribe" id="submit" name="submit">
+            <form class="search" type="get" action="{{ url('/search') }}">
+                <input type="search" name="query" class="textbox" id="search-input">
+                <button class="search-button" type="submit"> Tìm kiếm </button>
                 <div id="response"> </div>
-            </div>
+            </form>
             <div class="tag-list">
 
                 <ul class="icon1 sub-icon1 profile_img">
